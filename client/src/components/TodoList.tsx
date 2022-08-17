@@ -10,6 +10,7 @@ type TodoListProps = {
 
 export const TodoList = (props: TodoListProps) => {
   const { items, itemToggled } = props;
+  items.sort((a, b) => a.id! - b.id!);
 
   return (
     <>
