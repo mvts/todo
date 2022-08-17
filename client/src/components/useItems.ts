@@ -14,7 +14,6 @@ export const useItems = () => {
 
   const toggleCompleted = (itemId: number) => {
     const item = items.find((item) => item.id === itemId);
-    console.log("toggle", item);
     axios
       .post(`http://localhost:3000/todo-items/${itemId}`, {
         ...item,
@@ -28,7 +27,6 @@ export const useItems = () => {
 
   const addItem = (item: TodoListItem) => {
     axios.post("http://localhost:3000/todo-items", item).then((res) => {
-      console.log(res.data);
       setItems([...items, res.data]);
     });
   };

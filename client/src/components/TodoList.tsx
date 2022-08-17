@@ -1,6 +1,5 @@
 import axios from "axios";
 import { h, Fragment } from "preact";
-import { useState } from "preact/hooks";
 import { TodoItem } from "./TodoItem";
 import { TodoListItem } from "./types";
 

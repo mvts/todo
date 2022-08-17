@@ -15,6 +15,7 @@ export const TodoItem = (props: TodoItemProps) => {
           <div class="col">
             <input
               class="form-check-input"
+              data-testid={`checkbox-${item.id}`}
               type="checkbox"
               checked={item.completed}
               onClick={() => clickCheckbox(item.id!)}
